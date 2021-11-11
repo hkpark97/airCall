@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { format } from 'date-fns';
 
 const BORDER_COLOR = {
-  missed: '#f98798',
-  answered: '#28c420',
-  default: '#ececeb',
+  missed: 'red',
+  answered: '#636363',
+  default: '#636363',
 };
 
 const Wrapper = styled.div`

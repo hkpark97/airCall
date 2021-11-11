@@ -79,7 +79,7 @@ import React, {
             />
           ))}
         </div>
-        <ArchiveButton onClick={onResetAll}>Reset All</ArchiveButton>
+        <ArchiveButton onClick={onResetAll} style={{textAlign:"center"}} >Reset All</ArchiveButton>
       </>
     );
   });

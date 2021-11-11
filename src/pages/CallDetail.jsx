@@ -115,7 +115,7 @@ const CallDetail = React.memo(({
       </Header>
       <DetailContent>
         {detailContent}
-        <ArchiveButton onClick={handleArchiveClick}>Archive</ArchiveButton>
+        <ArchiveButton onClick={handleArchiveClick} style={{textAlign:"center"}} >Archive</ArchiveButton>
       </DetailContent>
     </DetailWrapper>
   );
