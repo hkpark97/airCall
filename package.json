@@ -7,7 +7,7 @@
   "author": "",
   "license": "",
   "private": false,
-   "scripts": {
+  "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "heroku-postbuild": "yarn build"
@@ -26,6 +26,7 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-saga": "^1.1.1",
+    "serve": "^13.0.2",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
