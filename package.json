@@ -11,6 +11,9 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "date-fns": "^2.6.0",
