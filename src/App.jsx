@@ -53,12 +53,18 @@ const useStyles = makeStyles((themes) => ({
     top: "1.2%",
     left: "2%",
   },
-  badge:{
+  badge: {
     "& .MuiBadge-anchorOriginTopRightCircular": {
-      right:"auto !important",
-      top:"60% !important",
+      right: "auto !important",
+      top: "70% !important",
     },
-  }
+  },
+  badge2: {
+    "& .MuiBadge-anchorOriginTopRightCircular": {
+      right: "auto !important",
+      top: "60% !important",
+    },
+  },
 }));
 
 const CircleText = ({ size = 16, count = 0 }) => {
@@ -83,26 +89,50 @@ const App = () => {
         <Header />
 
         <div style={{ marginTop: "5%" }}>
-          <Paper className={classes.containerPaper}>
-            <Grid container spacing={2}>
-              <Grid
-                item
-                xs={2}
-                style={{ textAlign: "center", marginTop: "3%" }}
+          <Grid
+            container
+            spacing={2}
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+          >
+            <Grid item xs={6} style={{ textAlign: "center" }} className={classes.boldText}>
+              <Paper
+                style={{
+                  width: "160px",
+                  height: "50px",
+                  border: "1px solid #BDBDBD",
+                  borderRadius: 10,
+                }}
               >
-                <ArchiveIcon style={{ width: "20px" }} />
-              </Grid>
-
-              <Grid
-                item
-                xs={10}
-                style={{ marginTop: "5%" }}
-                className={classes.boldText}
-              >
-                Archive all calls
-              </Grid>
+                <p style={{ paddingTop: "3%" }}> Activities </p>
+              </Paper>
             </Grid>
-          </Paper>
+
+            <span></span>
+            <Grid item xs={6} className={classes.boldText}>
+              <Paper
+                style={{
+                  width: "160px",
+                  textAlignLast: "center",
+                  border: "1px solid #BDBDBD",
+                  height: "50px",
+                  borderRadius: 10,
+                }}
+              >
+                {" "}
+                <div style={{display:"flex"}}>
+                <ArchiveIcon
+                  style={{
+                    width: "20px",
+                    padding:8,
+                    paddingTop:12,
+                  }}
+                />{" "}
+               <p style={{marginLeft:"15%", marginTop:"12%"}}> Archived </p>
+               </div>
+              </Paper>
+            </Grid>
+          </Grid>
+          {/* </Paper> */}
 
           {/* content 1 */}
           <p className={classes.dateText}>
@@ -162,16 +192,16 @@ const App = () => {
               </Grid>
 
               <Grid item xs={6}>
-                <div style={{display:"flex"}}>
-                <p className={classes.boldText} style={{ marginBottom: 0 }}>
-                  +33 6 45 13 53 91
-                </p> 
-                <Badge 
-                className={classes.badge}
-                  color="secondary"
-                  overlap="circular"
-                  badgeContent="1"
-                ></Badge>
+                <div style={{ display: "flex" }}>
+                  <p className={classes.boldText} style={{ marginBottom: 0 }}>
+                    +33 6 45 13 53 91
+                  </p>
+                  <Badge
+                    className={classes.badge}
+                    color="secondary"
+                    overlap="circular"
+                    badgeContent="1"
+                  ></Badge>
                 </div>
                 <p style={{ marginTop: 0 }} className={classes.subText}>
                   {" "}
@@ -211,16 +241,16 @@ const App = () => {
               </Grid>
 
               <Grid item xs={6}>
-                <div style={{display:"flex"}}>
-                <p className={classes.boldText} style={{ marginBottom: 0 }}>
-                  Arthur Andre
-                </p>
-                <Badge 
-                className={classes.badge}
-                  color="secondary"
-                  overlap="circular"
-                  badgeContent="8"
-                ></Badge>
+                <div style={{ display: "flex" }}>
+                  <p className={classes.boldText} style={{ marginBottom: 0 }}>
+                    Arthur Andre
+                  </p>
+                  <Badge
+                    className={classes.badge2}
+                    color="secondary"
+                    overlap="circular"
+                    badgeContent="8"
+                  ></Badge>
                 </div>
                 <p style={{ marginTop: 0 }} className={classes.subText}>
                   {" "}
