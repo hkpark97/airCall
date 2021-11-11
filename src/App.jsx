@@ -1,5 +1,11 @@
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import { makeStyles, Grid, Paper, Box, Button, Badge } from "@material-ui/core";
 import ArchiveIcon from "@material-ui/icons/Archive";
 import PhoneCallbackIcon from "@material-ui/icons/PhoneCallback";
@@ -66,19 +72,6 @@ const useStyles = makeStyles((themes) => ({
     },
   },
 }));
-
-const CircleText = ({ size = 16, count = 0 }) => {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root} style={{ fontSize: size }}>
-      <Brightness1Icon color="primary" className={classes.icon} />
-      <Typography component="span" className={classes.count}>
-        {count}
-      </Typography>
-    </div>
-  );
-};
 
 const App = () => {
   const classes = useStyles();
@@ -319,6 +312,6 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<BrowserRouter> <App /> </BrowserRouter>, document.getElementById("app"));
 
 export default App;
