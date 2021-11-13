@@ -42,3 +42,5 @@ module.exports = {
       maxAssetSize: 512000
   }
 };
+
+
